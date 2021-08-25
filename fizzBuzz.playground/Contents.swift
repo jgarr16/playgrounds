@@ -19,11 +19,13 @@ func fizzBuzz(_ number: Int) -> String {
 }
 
 func test_fizzBuzz(_ number: Int) -> String {
-    if fizzBuzz(number) == "fizz - 3" {
+    if fizzBuzz(number) == "fizz - \(number)" || fizzBuzz(number) == "buzz - \(number)" || fizzBuzz(number) == "\(number)" || fizzBuzz(number) == "fizz-buzz - \(number)" {
+        return "PASS"
+    } else {
+        return "FAIL"
     }
-    return "PASS"
 }
 
 let num = Int.random(in:2...55)
 print(fizzBuzz(num))
-print(test_fizzBuzz(3))
+print(test_fizzBuzz(num))
