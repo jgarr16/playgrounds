@@ -18,14 +18,22 @@ func fizzBuzz(_ number: Int) -> String {
     }
 }
 
-func test_fizzBuzz(_ number: Int) -> String {
-    if fizzBuzz(number) == "fizz - \(number)" || fizzBuzz(number) == "buzz - \(number)" || fizzBuzz(number) == "\(number)" || fizzBuzz(number) == "fizz-buzz - \(number)" {
-        return "PASS"
-    } else {
-        return "FAIL"
-    }
+//func test_fizzBuzz(_ number: Int) -> String {
+//    if fizzBuzz(number) == "fizz - \(number)" || fizzBuzz(number) == "buzz - \(number)" || fizzBuzz(number) == "\(number)" || fizzBuzz(number) == "fizz-buzz - \(number)" {
+//        return "PASS"
+//    } else {
+//        return "FAIL"
+//    }
+//}
+
+func test_fizzBuzz() {
+    let fb = XCTAssertTrue(fizzBuzz(3) == "fizz - 3")
+    print(fb)
 }
 
-let num = Int.random(in:2...55)
-print(fizzBuzz(num))
-print(test_fizzBuzz(num))
+//let num = Int.random(in:2...55)
+//print(fizzBuzz(num))
+//print(test_fizzBuzz(num))
+test_fizzBuzz()
+
+//fizzBuzz(3)
