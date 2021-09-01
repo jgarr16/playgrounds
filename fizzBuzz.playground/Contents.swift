@@ -26,10 +26,11 @@ func fizzBuzz(_ number: Int) -> String {
 //    }
 //}
 
-func test_fizzBuzz() -> String {
-    let fb1 = "fizz - 3"
+func test_fizzBuzz() {
+    // let fb1 = "fizz - 3"
     let fb2 = fizzBuzz(3)
-    if fb1 != fb2 { return "FAIL" } else { return "PASS" }
+    // if fb1 != fb2 { return "FAIL" } else { return "PASS" }
+    XCTAssertEqual(fb2, "fizz - 5", "FAIL")
 }
 
 //let num = Int.random(in:2...55)
